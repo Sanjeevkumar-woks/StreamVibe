@@ -8,7 +8,7 @@ const CarouselImages = [
 const Hero = () => {
   return (
     <div
-      className="hero w-screen h-1[100vh] bg-cover bg-center bg-no-repeat relative"
+      className="hero w-screen h-[100vh] bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${hero})` }}
     >
       {/* Inner shadow overlay */}
@@ -16,7 +16,7 @@ const Hero = () => {
 
       {/* Hero text positioned above the shadow */}
       <div className="relative z-10 flex  flex-col items-center justify-center h-full text-center ">
-        <div className="flex justify-between items-center w-screen p-20">
+        <div className="flex justify-around items-center gap-96 w-screen p-20">
           <div className="flex flex-col flex-1  justify-between items-center">
             <h1 className="text-white text-6xl font-bold mb-4 ">
               The Best <span className="text-red-500 shadow-sm">Streaming</span>{" "}

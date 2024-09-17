@@ -7,11 +7,67 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const Slide = ({ imgSrc, title, subtitle }) => (
+  <SwiperSlide>
+    <div className="swiper-slide inset-0 bg-black opacity-60 shadow-inner hover:opacity-100 transition-all duration-1000 ease-in-out">
+      <div className="image-wrapper aspect-video shadow-md shadow-white hover:shadow-red-600 rounded-lg">
+        <img
+          className="aspect-video object-cover rounded-lg"
+          src={imgSrc}
+          alt={title}
+        />
+      </div>
+      <div className="details text-center mt-4">
+        <h3 className="text-lg font-bold">{title}</h3>
+        <span className="block text-gray-500">{subtitle}</span>
+      </div>
+    </div>
+  </SwiperSlide>
+);
+const slidesData = [
+  {
+    imgSrc:
+      "https://images.pexels.com/photos/708440/pexels-photo-708440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=450",
+    title: "Lorem ipsum dolor",
+    subtitle: "Web Designer",
+  },
+  {
+    imgSrc:
+      "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=450",
+    title: "Lorem ipsum dolor",
+    subtitle: "Web Designer",
+  },
+  {
+    imgSrc:
+      "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=450",
+    title: "Lorem ipsum dolor",
+    subtitle: "Web Designer",
+  },
+  {
+    imgSrc:
+      "https://images.pexels.com/photos/8422523/pexels-photo-8422523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=450",
+    title: "Lorem ipsum dolor",
+    subtitle: "Web Designer",
+  },
+  {
+    imgSrc:
+      "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=450",
+    title: "Lorem ipsum dolor",
+    subtitle: "Web Designer",
+  },
+  {
+    imgSrc:
+      "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=450",
+    title: "Lorem ipsum dolor",
+    subtitle: "Web Designer",
+  },
+];
+
 const Carousel3D = () => {
   return (
     <section className=" bg-gray-900 p-10">
       <h2 className="text-4xl font-bold text-center mb-6 text-white">
-        Recent Release
+        Recent <span className="text-red-600">Release</span>
       </h2>
       <section className="carousel-3D-swiper-section">
         <Swiper
