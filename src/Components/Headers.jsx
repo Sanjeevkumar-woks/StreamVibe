@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Headers = () => {
   const [selected, setSelected] = useState("Home");
@@ -18,6 +19,8 @@ const Headers = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <header
       className={`flex justify-around items-center fixed top-0 z-20 w-full transition-all duration-300 ease-in-out p-2 ${
@@ -26,7 +29,12 @@ const Headers = () => {
     >
       {/* Logo */}
       <div className="logo">
-        <img src="/Logo.png" alt="logo" className="w-32 h-auto" />
+        <img
+          src="/Logo.png"
+          alt="logo"
+          className="w-32 h-auto cursor-pointer"
+          onClick={() => navigate("/")}
+        />
       </div>
 
       {/* Navigation for larger screens */}
@@ -40,7 +48,7 @@ const Headers = () => {
               } cursor-pointer text-white hover:bg-gray-700 p-2 rounded-lg transition-all duration-300`}
               onClick={() => setSelected(link)}
             >
-              {link}
+              <Link to={`/${link.toLowerCase()}`}>{link}</Link>
             </li>
           ))}
         </ul>

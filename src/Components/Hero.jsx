@@ -8,7 +8,7 @@ const CarouselImages = [
 const Hero = () => {
   return (
     <div
-      className="hero w-screen md:h-[80vh] h-1/2 bg-cover bg-center bg-no-repeat relative top-10 md:top-0 lg:top-5 mb-5"
+      className="hero w-screen md:h-[90vh] h-[100vh] bg-cover bg-center bg-no-repeat relative top-16 md:top-0 lg:top-0 "
       style={{ backgroundImage: `url(${hero})` }}
     >
       {/* Inner shadow overlay */}
