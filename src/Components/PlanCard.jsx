@@ -14,10 +14,10 @@ const PlanCard = ({ iconClass, planName, price, duration, description }) => {
         </p>
       </div>
       <div className="flex gap-4 justify-around items-center">
-        <button className="text-white text-sm hover:bg-red-700  rounded-md px-4 py-2 ">
+        <button className="text-white text-sm hover:bg-red-700  rounded-md p-2 ">
           Start Free Trial
         </button>
-        <button className="text-white text-sm  bg-red-600 rounded-md px-4 py-2">
+        <button className="text-white text-sm  bg-red-600 rounded-md p-2">
           Choose Plan
         </button>
       </div>

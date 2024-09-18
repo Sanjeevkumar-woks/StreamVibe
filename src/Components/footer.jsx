@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black flex flex-col gap-2 justify-center items-center ">
-      <div className="flex w-full gap-4 p-5 justify-around">
+    <footer className="bg-black flex flex-col gap-4 justify-center items-center pt-4 sm:pt-2">
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 justify-items-center">
         {/* Column 1 */}
         <div className="flex flex-col gap-2">
-          <Link to="/home">Home</Link>
+          <Link to="/home" className="text-white font-semibold">
+            Home
+          </Link>
           <Link
             to="/categories"
             className="text-sm text-gray-600 hover:text-white"
@@ -32,7 +34,9 @@ const Footer = () => {
 
         {/* Column 2 */}
         <div className="flex flex-col gap-2">
-          <Link to="/movies">Movies</Link>
+          <Link to="/movies" className="text-white font-semibold">
+            Movies
+          </Link>
           <Link to="/genres" className="text-sm text-gray-600 hover:text-white">
             Genres
           </Link>
@@ -58,7 +62,9 @@ const Footer = () => {
 
         {/* Column 3 */}
         <div className="flex flex-col gap-2">
-          <Link to="/shows">Shows</Link>
+          <Link to="/shows" className="text-white font-semibold">
+            Shows
+          </Link>
           <Link to="/genres" className="text-sm text-gray-600 hover:text-white">
             Genres
           </Link>
@@ -84,7 +90,9 @@ const Footer = () => {
 
         {/* Column 4 */}
         <div className="flex flex-col gap-2">
-          <Link to="/support">Support</Link>
+          <Link to="/support" className="text-white font-semibold">
+            Support
+          </Link>
           <Link
             to="/contact-us"
             className="text-sm text-gray-600 hover:text-white"
@@ -110,7 +118,9 @@ const Footer = () => {
 
         {/* Column 5 */}
         <div className="flex flex-col gap-2">
-          <Link to="/subscription">Subscription</Link>
+          <Link to="/subscription" className="text-white font-semibold">
+            Subscription
+          </Link>
           <Link to="/plans" className="text-sm text-gray-600 hover:text-white">
             Plans
           </Link>
@@ -123,11 +133,11 @@ const Footer = () => {
         </div>
 
         {/* Connect with Us */}
-        <div className="flex flex-col gap-2 justify-center">
-          <Link to="/connect" className="text-center font-semibold">
+        <div className="flex flex-col gap-2 justify-center items-center">
+          <Link to="/connect" className="text-center font-semibold text-white">
             Connect with us
           </Link>
-          <div className="flex gap-4 text-2xl">
+          <div className="flex gap-4 text-2xl text-gray-600 hover:text-white">
             <i className="fa-brands fa-facebook"></i>
             <i className="fa-brands fa-twitter"></i>
             <i className="fa-brands fa-instagram"></i>
@@ -137,13 +147,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="container mx-auto flex justify-between items-center text-sm text-gray-500 py-2 bg-gray-900">
+      <div className=" flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 p-2 bg-gray-900 w-full">
         <p className="text-center">
           &copy; 2023 StreamVibe. All Rights Reserved.
         </p>
-        <div>
-          <p className="text-center">Made with ❤️ by StreamVibe</p>
-        </div>
         <div className="flex gap-4">
           <Link to="/terms-of-use" className="text-gray-600 hover:text-white">
             Terms of Use
