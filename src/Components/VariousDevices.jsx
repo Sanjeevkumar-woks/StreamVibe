@@ -5,7 +5,7 @@ const VariousDevices = () => {
   return (
     <div className="p-4 text-center">
       <div className="p-4 flex flex-col justify-center items-center gap-2">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-4xl font-semibold">
           We Provide you streaming experience on various{" "}
           <span className="text-red-500">Devices</span>
         </h2>
