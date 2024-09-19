@@ -7,6 +7,13 @@ export const devices = [
       "StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store.",
   },
   {
+    id: "Tablets",
+    iconClass: "fa-solid fa-tablet-alt",
+    deviceName: "Tablets",
+    description:
+      "StreamVibe works seamlessly on iPads and other popular tablets.",
+  },
+  {
     id: "SmartTVs",
     iconClass: "fa-solid fa-tv",
     deviceName: "Smart TVs",
@@ -20,25 +27,18 @@ export const devices = [
     description:
       "Watch your favorite content on laptops and desktops using our responsive web app.",
   },
-  {
-    id: "Tablets",
-    iconClass: "fa-solid fa-tablet-alt",
-    deviceName: "Tablets",
-    description:
-      "StreamVibe works seamlessly on iPads and other popular tablets.",
-  },
-  {
-    id: "Desktops",
-    iconClass: "fa-solid fa-desktop",
-    deviceName: "Desktops",
-    description:
-      "Experience the best quality on large displays with our web app for desktop.",
-  },
+
   {
     id: "GamingConsoles",
     iconClass: "fa-solid fa-gamepad",
     deviceName: "Gaming Consoles",
     description:
       "StreamVibe supports Xbox, PlayStation, and other gaming consoles.",
+  },
+  {
+    id: "VRHeadsets",
+    iconClass: "fa-solid fa-vr-cardboard",
+    deviceName: "VR Headsets",
+    description: "StreamVibe supports Oculus, HTC Vive, and other VR headsets.",
   },
 ];
