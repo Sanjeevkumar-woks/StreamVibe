@@ -1,5 +1,4 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-
 import "./index.css";
 import Home from "./pages/Home";
 import MoviesAndShows from "./pages/Movies&Shows";
@@ -9,8 +8,8 @@ import Subscription from "./pages/Subscription";
 import Support from "./pages/Support";
 import PageNotFound from "./pages/404";
 import Headers from "./Components/Headers";
-import Footer from "./Components/Footer";
 import FAQ from "./Components/FAQ";
+import Footer from "./Components/Footer";
 
 export default function App() {
   return (
