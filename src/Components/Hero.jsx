@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import hero from "../../public/images/SubContainer.png";
-import Carousel3D from "./Carousel3D";
+import backgroundImage from "../images/SubContainer.png";
 
 const CarouselImages = [
   "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg",
@@ -11,7 +10,7 @@ const Hero = () => {
   return (
     <div
       className="hero w-screen md:h-[90vh] h-[100vh] bg-cover bg-center bg-no-repeat relative top-16 md:top-0 lg:top-0 "
-      style={{ backgroundImage: `url(${hero})` }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Inner shadow overlay */}
       <div className="absolute inset-0 bg-black opacity-40 shadow-inner"></div>

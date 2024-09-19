@@ -1,5 +1,4 @@
-import background from "../../public/images/BackgroundImages.png";
-
+import background from "../images/BackgroundImages.png";
 const FreeTrial = () => {
   return (
     <div
