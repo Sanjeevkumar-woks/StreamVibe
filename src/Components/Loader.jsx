@@ -1,5 +1,12 @@
 const Loader = () => {
-  return <div className="loader w-full h-full ">Loading ....</div>;
+  return (
+    <div className="flex justify-center items-center h-screen w-screen">
+      <div
+        className="w-32 h-32 rounded-full animate-spin
+                    border-2 border-solid border-red-500 border-t-transparent  "
+      ></div>
+    </div>
+  );
 };
 
 export default Loader;

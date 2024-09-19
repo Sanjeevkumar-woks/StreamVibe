@@ -5,11 +5,6 @@ import { FilmsService } from "../Servers/Films";
 import Loader from "../Components/Loader";
 import { filter } from "d3";
 
-const MOVIE_TYPES = {
-  MOVIE: "Movie",
-  SERIES: "Series",
-};
-
 const SearchPage = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [page, setPage] = useState(1);
@@ -19,7 +14,7 @@ const SearchPage = () => {
 
   // Pagination handler
   const handlePageChange = (pageNumber) => {
-    setLoading;
+    setLoading(true);
     setPage(pageNumber);
     // Trigger a new search with the updated page
     const payload = {
@@ -97,9 +92,9 @@ const SearchPage = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="flex flex-col justify-center items-center w-full max-w-5xl">
+        <div className="flex flex-col justify-center items-center">
           {searchResults?.length > 0 ? (
-            <div className="flex flex-col justify-center items-center w-full">
+            <div className="flex flex-col justify-center items-center">
               {/* filter by: */}
               <div className="p-4 m-2">
                 <Dropdown menu={menuProps}>
@@ -109,7 +104,7 @@ const SearchPage = () => {
                 </Dropdown>
               </div>
               {/* Responsive grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
                 {searchResults.map((result) => (
                   <div
                     key={result.imdbID}
@@ -134,7 +129,7 @@ const SearchPage = () => {
                   current={page}
                   total={totalPages * 10} // Multiply by 10 for total results
                   onChange={handlePageChange}
-                  showSizeChanger={false} // Optional: Disable page size change
+                  showSizeChanger={false}
                 />
               </div>
             </div>
