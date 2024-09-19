@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Headers = () => {
   const [selected, setSelected] = useState("Home");
-  const [isOpen, setIsOpen] = useState(false);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [auth, setAuth] = useState(true);
-  const links = ["Home", "Movies & shows", "Support", "Subscription"];
+  const links = ["Home", "Movies", "Support", "Subscription"];
   const [scrolled, setScrolled] = useState(false);
 
   // Handle scroll effect
@@ -54,26 +54,12 @@ const Headers = () => {
         </ul>
       </nav>
 
-      {/* Search Bar (Visible only if opened) */}
-      {isOpen && (
-        <div className="SearchBar flex items-center gap-2 md:gap-2 justify-center mx-2">
-          <input
-            type="text"
-            placeholder="Search"
-            className="input input-bordered p-2 rounded-md w-[100%] bg-slate-200"
-          />
-          <button className="btn btn-primary hover:bg-red-600 rounded-md p-2">
-            Search
-          </button>
-        </div>
-      )}
-
       {/* Icons and Auth Buttons */}
       <div className="flex gap-5 justify-around items-center">
         <div className="icon-buttons flex justify-around items-center gap-4">
           <button
             className="btn btn-primary"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => navigate("/search")}
           >
             <i className="fa-solid fa-magnifying-glass fa-lg"></i>
           </button>

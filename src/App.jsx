@@ -9,16 +9,19 @@ import Support from "./pages/Support";
 import PageNotFound from "./pages/404";
 import Headers from "./Components/Headers";
 import FAQ from "./Components/FAQ";
-import Footer from "./Components/Footer";
+import SearchPage from "./pages/SearchPage";
+import Footer from "./Components/FooterComponent";
 
 export default function App() {
   return (
     <div>
       <Headers />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
-        <Route path="/movies-and-shows" element={<MoviesAndShows />} />
+        <Route path="/movies" element={<MoviesAndShows />} />
+        <Route path="/search" element={<SearchPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/subscription" element={<Subscription />} />

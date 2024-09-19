@@ -19,7 +19,6 @@ const SupportForm = () => {
 
   // Form submission handler
   const handleSubmit = (values, { resetForm }) => {
-    console.log("Form data:", values);
     alert("Message submitted successfully!");
     resetForm();
   };
@@ -35,10 +34,11 @@ const SupportForm = () => {
           We're here to help you with any problems you may be having with our
           product.
         </p>
+
         <img
-          src="../images/SubContainer2.png"
-          alt="SubContainer"
-          className="w-3/4 "
+          src="/SubContainer2.png"
+          alt="subscription"
+          className="w-full h-auto"
         />
       </div>
 

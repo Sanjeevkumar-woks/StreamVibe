@@ -1,0 +1,5 @@
+{
+  "BACKEND_URL": {
+    "OMDB_API": "https://www.omdbapi.com"
+  }
+}
