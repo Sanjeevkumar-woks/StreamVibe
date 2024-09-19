@@ -9,7 +9,6 @@ import Support from "./pages/Support";
 import PageNotFound from "./pages/404";
 import Headers from "./Components/Headers";
 import FAQ from "./Components/FAQ";
-import Footer from "./Components/Footer";
 
 export default function App() {
   return (
@@ -26,7 +25,6 @@ export default function App() {
         <Route path="/support" element={<Support />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
