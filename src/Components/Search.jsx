@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { AutoComplete, Input, Spin } from "antd";
-import { GET_FILMS } from "../Servers/Films";
+import { FilmsService } from "../Servers/Films";
 import { useNavigate } from "react-router-dom";
 
-const Search = ({ setSearchResults }) => {
-  const [search, setSearch] = useState("");
+const Search = ({ setSearchResults, search, setSearch, setTotalPages }) => {
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -22,22 +21,22 @@ const Search = ({ setSearchResults }) => {
 
     const payload = {
       search: searchTerm,
-      type: "movie",
       page: 1,
     };
 
     setLoading(true);
     try {
-      const data = await GET_FILMS(payload);
+      const data = await FilmsService.GET_FILMS(payload);
       if (data) {
         // Map results to match AntD AutoComplete structure
-        const results = data.map((movie) => ({
+        const results = data?.Search?.map((movie) => ({
           value: movie.Title,
           label: `${movie.Title} (${movie.Year})`,
           imdbID: movie.imdbID,
         }));
         setSuggestions(results);
-        setSearchResults(data);
+        setTotalPages(Math.round(data?.totalResults / 10) + 1);
+        setSearchResults(data.Search);
       }
     } catch (err) {
       setError("Failed to fetch movie suggestions");
@@ -65,7 +64,7 @@ const Search = ({ setSearchResults }) => {
   };
 
   return (
-    <div className="search px-4 py-5 w-screen">
+    <div className="search m-5 w-1/2 mx-auto">
       <AutoComplete
         value={search}
         options={suggestions}
@@ -74,7 +73,7 @@ const Search = ({ setSearchResults }) => {
         style={{ width: "100%" }}
         notFoundContent={loading ? <Spin /> : error ? error : null}
       >
-        <Input.Search placeholder="Search for a movie..." />
+        <Input.Search placeholder="Search for a movie..." className="p-2" />
       </AutoComplete>
     </div>
   );

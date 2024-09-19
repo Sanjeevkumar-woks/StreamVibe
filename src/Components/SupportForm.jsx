@@ -19,7 +19,6 @@ const SupportForm = () => {
 
   // Form submission handler
   const handleSubmit = (values, { resetForm }) => {
-    console.log("Form data:", values);
     alert("Message submitted successfully!");
     resetForm();
   };
