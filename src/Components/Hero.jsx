@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import hero from "../../public/images/SubContainer.png";
 import Carousel3D from "./Carousel3D";
 
@@ -6,6 +7,7 @@ const CarouselImages = [
 ];
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div
       className="hero w-screen md:h-[90vh] h-[100vh] bg-cover bg-center bg-no-repeat relative top-16 md:top-0 lg:top-0 "
@@ -34,7 +36,10 @@ const Hero = () => {
               You can also create your own watch-lists, so you can easily find
               the content you want to watch.
             </p>
-            <button className="btn bg-red-500 hover:bg-red-600 p-2 rounded-md mt-4">
+            <button
+              className="btn bg-red-500 hover:bg-red-600 p-2 rounded-md mt-4"
+              onClick={() => navigate("/movies-and-shows")}
+            >
               <i className="fa-solid fa-play"></i> &nbsp; Start Watching
             </button>
           </div>
