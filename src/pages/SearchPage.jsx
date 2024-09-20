@@ -4,6 +4,7 @@ import { Button, Dropdown, Pagination, Space } from "antd";
 import { FilmsService } from "../Servers/Films";
 import Loader from "../Components/Loader";
 import { filter } from "d3";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const SearchPage = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -11,6 +12,8 @@ const SearchPage = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   // Pagination handler
   const handlePageChange = (pageNumber) => {
@@ -109,6 +112,7 @@ const SearchPage = () => {
                   <div
                     key={result.imdbID}
                     className="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-red-600 hover:transform hover:scale-105 transition-all duration-300"
+                    onClick={() => navigate(`/movie/${result.imdbID}`)}
                   >
                     <img
                       src={result.Poster}
