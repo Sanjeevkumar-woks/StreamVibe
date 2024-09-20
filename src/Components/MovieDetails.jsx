@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "./Loader";
 import { FilmsService } from "../Servers/Films";
+import FreeTrial from "./FreeTrial";
 
 const MovieDetails = () => {
   const { imdbId } = useParams();
@@ -121,6 +122,7 @@ const MovieDetails = () => {
               />
             </div>
           </div>
+          <FreeTrial />
         </div>
       )}
     </>
