@@ -19,7 +19,7 @@ const MovieCarousel = ({ heading, movies }) => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-2 px-20 py-2">
+      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-2  p-4">
         <h2 className="text-2xl font-bold">{heading}</h2>
         <div className="bg-black rounded-lg p-2">
           <button
@@ -40,7 +40,7 @@ const MovieCarousel = ({ heading, movies }) => {
 
       <div className="flex items-center justify-center p-4">
         {/* Movie Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 ">
           {movies.slice(currentIndex, currentIndex + 5).map((movie) => (
             <div
               key={movie.imdbID}
