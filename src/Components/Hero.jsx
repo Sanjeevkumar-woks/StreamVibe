@@ -9,14 +9,14 @@ const Hero = () => {
   const navigate = useNavigate();
   return (
     <div
-      className="hero w-screen md:h-[100vh] h-[100vh] bg-cover bg-center bg-no-repeat relative  md:top-0 lg:top-0 "
+      className="hero w-screen h-screen bg-cover bg-center bg-no-repeat relative md:top-0 lg:top-0 mb-20 md:mb-5 lg:mb-5"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Inner shadow overlay */}
       <div className="absolute inset-0 bg-black opacity-40 shadow-inner"></div>
 
       {/* Hero text positioned above the shadow */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 mt-12 md:mt-20 lg:mt-0">
         <div className="flex flex-col lg:flex-row justify-around items-center gap-10 lg:gap-96 w-full p-4 lg:p-20">
           {/* Text Section */}
           <div className="flex flex-col flex-1 justify-between items-center lg:items-start text-center lg:text-left">
