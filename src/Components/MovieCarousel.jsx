@@ -44,7 +44,7 @@ const MovieCarousel = ({ heading, movies }) => {
           {movies.slice(currentIndex, currentIndex + 5).map((movie) => (
             <div
               key={movie.imdbID}
-              className=" rounded-lg bg-gray-900 p-2 shadow-sm hover:scale-105  hover:shadow-red-500 transition-all duration-300 cursor-pointer"
+              className="flex flex-col justify-center items-center  rounded-lg bg-gray-900 p-2 shadow-sm hover:scale-105  hover:shadow-red-500 transition-all duration-300 cursor-pointer"
               onClick={() => navigate(`/movie/${movie.imdbID}`)}
             >
               <img
@@ -55,9 +55,11 @@ const MovieCarousel = ({ heading, movies }) => {
               <h3 className="text-white font-semibold text-lg line-clamp-2">
                 {movie.Title}
               </h3>
-              <div className="flex justify-between items-center mt-2 text-gray-400">
+              <div className="flex justify-between gap-4 mt-2 text-gray-400">
                 <span>{movie.Year}</span>
-                <span>{movie.Runtime}</span>
+                <p>
+                  <span>{movie.Type.toUpperCase()}</span>
+                </p>
               </div>
             </div>
           ))}
