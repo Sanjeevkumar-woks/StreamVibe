@@ -12,6 +12,7 @@ import FAQ from "./Components/FAQ";
 import SearchPage from "./pages/SearchPage";
 import Footer from "./Components/FooterComponent";
 import MovieDetails from "./Components/MovieDetails";
+import GenerMovies from "./Components/GenreMovies";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/movies" element={<MoviesAndShows />} />
         <Route path="/movie/:imdbId" element={<MovieDetails />} />
+        <Route path="/genre/:genre" element={<GenerMovies />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />

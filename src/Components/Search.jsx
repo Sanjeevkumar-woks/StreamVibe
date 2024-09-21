@@ -63,6 +63,10 @@ const Search = ({ setSearchResults, search, setSearch, setTotalPages }) => {
     setSearchResults([]);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="search m-5 w-1/2 mx-auto">
       <AutoComplete
