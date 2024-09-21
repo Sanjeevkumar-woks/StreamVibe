@@ -6,7 +6,7 @@ const Headers = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [auth, setAuth] = useState(true);
-  const links = ["Home", "Movies", "Support", "Subscription"];
+  const links = ["Home", "Movies-Shows", "Support", "Subscription"];
   const [scrolled, setScrolled] = useState(false);
 
   // Handle scroll effect
@@ -105,7 +105,7 @@ const Headers = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed justify-center items-center md:hidden top-0 right-0 w-1/2 h-screen bg-transparent bg-gray-700 text-white p-5 z-30">
+        <div className="fixed justify-center items-center md:hidden top-0 right-0 w-1/2 h-auto  bg-gray-500 text-white p-5 z-30">
           <button
             className="text-white text-2xl absolute top-5 right-5"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -124,7 +124,7 @@ const Headers = () => {
                   setIsMobileMenuOpen(false);
                 }}
               >
-                {link}
+                <Link to={`/${link.toLowerCase()}`}>{link}</Link>
               </li>
             ))}
           </ul>

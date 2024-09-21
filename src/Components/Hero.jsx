@@ -37,7 +37,7 @@ const Hero = () => {
             </p>
             <button
               className="btn bg-red-500 hover:bg-red-600 p-2 rounded-md mt-4"
-              onClick={() => navigate("/movies-and-shows")}
+              onClick={() => navigate("/movies-shows")}
             >
               <i className="fa-solid fa-play"></i> &nbsp; Start Watching
             </button>
