@@ -44,6 +44,7 @@ const GenreCarousel = ({ heading }) => {
           <div
             key={genre.id}
             className="p-4 bg-black rounded-md transform hover:scale-105 duration-300 ease-in-out shadow-sm hover:shadow-lg hover:shadow-red-500"
+            onClick={() => navigate(`/genre/${genre.name}`)}
           >
             <img src={genre.image} alt={genre.name} />
             <div className="flex items-center justify-around text-lg text-gray-500 p-2">
