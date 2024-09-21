@@ -21,7 +21,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
-        <Route path="/movies" element={<MoviesAndShows />} />
+        <Route path="/movies-shows" element={<MoviesAndShows />} />
         <Route path="/movie/:imdbId" element={<MovieDetails />} />
         <Route path="/genre/:genre" element={<GenerMovies />} />
         <Route path="/search" element={<SearchPage />} />
