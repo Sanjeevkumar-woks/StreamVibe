@@ -71,22 +71,19 @@ const Headers = () => {
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center">
           {auth ? (
-            <button
-              className="btn bg-red-600 hover:bg-red-900 text-white rounded-md p-2"
-              onClick={() => setAuth(false)}
-            >
-              Logout
+            <button className="btn bg-red-600 hover:bg-red-900 text-white rounded-md p-2">
+              <Link to="/login">Logout</Link>
             </button>
           ) : (
             <div className="auth-buttons flex gap-4">
-              <button className="btn btn-primary" onClick={() => setAuth(true)}>
-                Login
+              <button className="btn btn-primary">
+                <Link to="/login">Login</Link>
               </button>
               <button
                 className="btn bg-green-600 hover:bg-green-900 text-white rounded-md p-2"
                 onClick={() => setAuth(true)}
               >
-                Sign Up
+                <Link to="/signup">SignUp</Link>
               </button>
             </div>
           )}
@@ -131,22 +128,19 @@ const Headers = () => {
 
           {/* Auth Buttons */}
           {auth ? (
-            <button
-              className="btn bg-red-600 hover:bg-red-900 text-white rounded-md p-2 mt-2 w-full"
-              onClick={() => setAuth(false)}
-            >
-              Logout
+            <button className="btn bg-red-600 hover:bg-red-900 text-white rounded-md p-2 mt-2 w-full">
+              <Link to="/login">Logout</Link>
             </button>
           ) : (
             <div className="auth-buttons flex flex-col gap-4 mt-2">
               <button className="btn btn-primary" onClick={() => setAuth(true)}>
-                Login
+                <Link to="/login">Login</Link>
               </button>
               <button
                 className="btn bg-green-600 hover:bg-green-900 text-white rounded-md p-2"
                 onClick={() => setAuth(true)}
               >
-                Sign Up
+                <Link to="/signup">SignUp</Link>
               </button>
             </div>
           )}
