@@ -15,7 +15,7 @@ Stream Vibe website built using react, Tailwind3, JavaScript, and Tailwind. That
 ## 📌 Sneak Peek of Main Page 🙈 :
 
 ![Main-Page](./public/preview1.png)
-![Movies](./public/preview2.png)
+![Movies](https://github.com/Sanjeevkumar-woks/StreamVibe/blob/master/public/Preview2.png?raw=true)
 
 <h2>📬 Contact</h2>
 
